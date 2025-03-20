@@ -1,11 +1,12 @@
-function Home() {
+import React from 'react'
+import Header from '../../components/header'
+
+const Home = () => {
     return (
-        <div>
-        <h1>Home</h1>
-        <p>This is the Home page</p>
+        <div className='main text-white'>
+            <Header />
         </div>
-    );
-    
+    )
 }
 
-export default Home;
+export default Home
