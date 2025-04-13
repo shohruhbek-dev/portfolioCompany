@@ -15,7 +15,6 @@ function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
-        // You can send formData to a backend or use email API
     };
 
     return (
@@ -28,7 +27,6 @@ function Contact() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                {/* Left Section */}
                 <div className="space-y-6">
                     <h3 className="text-lg sm:text-xl xl:text-3xl md:text-2xl font-semibold">
                         Sizning g'oyalaringizni tinglashni va ularni muvaffaqiyatli amalga oshirishda yordam berishni istaymiz!
@@ -48,7 +46,6 @@ function Contact() {
                     </div>
                 </div>
 
-                {/* Right Section (Form) */}
                 <div className="contact-form flex flex-col gap-6 text-white">
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F9EFEC]">Bizga yozing</h3>
                     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
