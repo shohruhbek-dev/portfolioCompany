@@ -27,7 +27,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <p className="text-center text-sm sm:text-base mt-4">© 2024 Barcha huquqlar himoyalangan</p>
+      <p className="text-center text-sm sm:text-base mt-4">© 2025 Barcha huquqlar himoyalangan</p>
     </div>
   );
 }

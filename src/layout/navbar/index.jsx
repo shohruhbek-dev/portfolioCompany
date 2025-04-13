@@ -8,11 +8,11 @@ function Navbar() {
         </div>
         <div>
             <ul className='flex gap-4 '>
-                <li className='bg-[#0F0F0F] px-[24px] py-[18px] rounded-[12px] text-white text-lg hover:bg-[#FF6600]'><a  href="">Bosh sahifa</a></li>
-                <li  className='bg-[#0F0F0F] px-[24px] py-[18px] rounded-[12px] text-white text-lg hover:bg-[#FF6600]'><a href="">Kompaniya haqida</a></li>
-                <li  className='bg-[#0F0F0F] px-[24px] py-[18px] rounded-[12px] text-white text-lg hover:bg-[#FF6600]'><a href="">Xizmatlar</a></li>
-                <li  className='bg-[#0F0F0F] px-[24px] py-[18px] rounded-[12px] text-white text-lg hover:bg-[#FF6600]'><a href="">Mijozlar</a></li>
-                <li  className='bg-[#0F0F0F] px-[24px] py-[18px] rounded-[12px] text-white text-lg hover:bg-[#FF6600]'><a href="">Aloqa</a></li>
+                <li className='bg-[#0F0F0F] px-[20px] py-[16px] rounded-[12px] text-white text-[16px] hover:bg-[#FF6600]'><a  href="">Bosh sahifa</a></li>
+                <li  className='bg-[#0F0F0F] px-[20px] py-[16px] rounded-[12px] text-white text-[16px] hover:bg-[#FF6600]'><a href="">Kompaniya haqida</a></li>
+                <li  className='bg-[#0F0F0F] px-[20px] py-[16px] rounded-[12px] text-white text-[16px] hover:bg-[#FF6600]'><a href="">Xizmatlar</a></li>
+                <li  className='bg-[#0F0F0F] px-[20px] py-[16px] rounded-[12px] text-white text-[16px] hover:bg-[#FF6600]'><a href="">Mijozlar</a></li>
+                <li  className='bg-[#0F0F0F] px-[20px] py-[16px] rounded-[12px] text-white text-[16px] hover:bg-[#FF6600]'><a href="">Aloqa</a></li>
             </ul>
         </div>
         </div>
