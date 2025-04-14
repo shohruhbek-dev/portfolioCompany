@@ -1,7 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-
 function ServiceCard({ service }) {
     const { icon, serviceType, serviceDescription, moreDescriptions = [] } = service;
   
