@@ -39,7 +39,7 @@ const About = () => {
     };
 
     return (
-        <div className='about max-w-[1840px] w-full h-auto container'>
+        <div id='about' className='about max-w-[1840px] w-full h-auto container'>
             <div className="about-in relative bg-[#1A1A1A] rounded-[20px] p-3 mt-5 min-[420px]:p-5 sm:pt-8 2xl:pl-8">
                 <span className='about-texts flex flex-col gap-2 uppercase font-semibold text-4xl text-white mb-4 xl:text-5xl 2xl:text-7xl'>
                     <h2>digital solutions</h2>

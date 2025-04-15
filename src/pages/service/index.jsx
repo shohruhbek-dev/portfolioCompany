@@ -53,7 +53,7 @@ const services = [
 
 function Service() {
     return (
-        <div className="service w-full my-10 p-5 border-dotted border-[#1F1F1F] border rounded-2xl">
+        <div id='service' className="service w-full my-10 p-5 border-dotted border-[#1F1F1F] border rounded-2xl">
           <div className="mb-8 w-full bg-[#1A1A1A] p-6 sm:p-8 md:p-[50px] rounded-2xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F9EFEC]">Xizmatlar</h2>
           </div>

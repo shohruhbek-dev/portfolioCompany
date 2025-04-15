@@ -1,12 +1,19 @@
 import React from 'react';
+import logo from '../../assets/logocom.avif';
 
 function Footer() {
   return (
     <div className="footer w-full bg-[#1A1A1A] text-white p-6 sm:p-8 md:p-10 rounded-2xl">
       <div className="bg-[#1A1A1A] text-white p-4 flex flex-col gap-4 sm:flex-row justify-between items-center rounded-2xl">
-        <div>
-          logo
+        <div className="cursor-pointer" onClick={() => {
+          const target = document.getElementById('about');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}>
+          <img src={logo} alt="logo" className='w-32 h-full' />
         </div>
+
         <div>
           <ul className="flex flex-row gap-4 sm:gap-6">
             <li className="bg-[#0F0F0F] px-[24px] py-[10px] rounded-[12px] text-white text-lg hover:bg-[#FF6600]">

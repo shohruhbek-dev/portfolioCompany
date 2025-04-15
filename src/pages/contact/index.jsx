@@ -18,7 +18,7 @@ function Contact() {
     };
 
     return (
-        <section className="contact w-full my-20 py-10 px-4 sm:px-8 md:px-12 lg:px-24 bg-[#1A1A1A] text-white rounded-2xl">
+        <section id='contact' className="contact w-full my-20 py-10 px-4 sm:px-8 md:px-12 lg:px-24 bg-[#1A1A1A] text-white rounded-2xl">
             <div className="container mx-auto text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl md:text-4xl 2xl:text-5xl font-bold text-[#F9EFEC]">Aloqa uchun</h2>
                 <p className="mt-4 text-base sm:text-lg text-[#B3B3B2]">
