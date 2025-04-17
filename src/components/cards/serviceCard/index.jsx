@@ -5,7 +5,7 @@ function ServiceCard({ service }) {
     const { icon, serviceType, serviceDescription, moreDescriptions = [] } = service;
   
     return (
-      <div className="serviceCard w-full rounded-2xl shadow-md p-6 md:p-8 bg-[#1A1A1A] text-[#B3B3B2] flex flex-col gap-4 hover:scale-101 transition-transform duration-300 ease-in-out">
+      <div className="serviceCard w-full rounded-2xl shadow-md p-6 md:p-8 bg-[#1A1A1A] text-white flex flex-col gap-4 hover:scale-101 transition-transform duration-300 ease-in-out">
         
         <div className="flex items-center gap-4 mb-2 sm:mb-4">
           <FontAwesomeIcon icon={icon} className="text-[#FF6600] text-xl sm:text-2xl md:text-3xl" />
