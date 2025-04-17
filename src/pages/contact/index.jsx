@@ -44,7 +44,7 @@ function Contact() {
                 </div>
 
                 <div className="contact-form flex flex-col gap-6 text-white">
-                    <h2 className="text-3xl sm:text-4xl md:text-4xl 2xl:text-5xl font-medium text-white">Aloqa uchun</h2>
+                    <h2 className="text-3xl sm:text-4xl md:text-4xl 2xl:text-5xl font-medium text-white max-md:text-center">Aloqa uchun</h2>
                     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                         <input
                             type="text"

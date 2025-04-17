@@ -10,7 +10,7 @@ import {
 const services = [
     {
         icon: faLaptopCode,
-        serviceType: "Web development",
+        serviceType: "Veb rivojlantirish",
         serviceDescription: "Biz sizning brendingiz va maqsadlaringizga mos zamonaviy veb-saytlar yaratamiz.",
         moreDescriptions: [
             "SEO-ga moslashtirilgan saytlar",
