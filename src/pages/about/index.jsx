@@ -51,7 +51,7 @@ const About = () => {
                     <p className='font-normal text-xl uppercase mt-2 xl:text-3xl'>Start a Project</p>
                 </a>
                 <img
-                    className='code-gif w-[280px] h-[220px] md:absolute md:right-4 md:top-4 xl:w-[340px] xl:h-[250px] 2xl:w-[500px] 2xl:h-[370px] rounded-2xl mb-4 xl:top-10 xl:right-8'
+                    className='code-gif w-[280px] h-[220px] md:absolute md:right-4 md:top-4 xl:w-[340px] xl:h-[250px] 2xl:w-[500px] 2xl:h-[370px] rounded-2xl mb-5 xl:top-10 xl:right-8'
                     loading='lazy'
                     src={cod}
                     alt="coding" />

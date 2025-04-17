@@ -38,11 +38,11 @@ function Navbar() {
                         <img src={logo} alt="logo" className='w-32 h-full' />
                     </div>
 
-                    <ul className='nav-desktop gap-4 text-[16px]'>
+                    <ul className='nav-desktop gap-4 text-[16px] uppercase'>
                         {navLinks.map((link, idx) => (
                             <li
                                 key={idx}
-                                className='bg-[#0F0F0F] px-[20px] py-[16px] rounded-[12px] hover:bg-[#FF6600] cursor-pointer transition-colors duration-300'
+                                className='bg-[#0F0F0F] px-4 py-3 rounded-[12px] hover:bg-[#FF6600] cursor-pointer transition-colors duration-300'
                                 onClick={() => {
                                     const target = document.getElementById(link.href);
                                     if (target) {
@@ -67,17 +67,17 @@ function Navbar() {
 
                 </div>
 
-                <div className={`nav-mobile fixed top-0 left-0 h-[100vh] w-full md:w-[70%] bg-[#1A1A1A] text-white p-6 z-50 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+                <div className={`nav-mobile fixed top-0 left-0 h-[100vh] w-[90%] min-[550px]:w-[70%] bg-[#1A1A1A] uppercase text-white p-6 z-50 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
                 >
                     <div className='flex justify-between items-center mb-6'>
                         <img src={logo} alt="logo" className='w-32' />
-                        <XMarkIcon className='h-8 w-8 cursor-pointer md:hidden' onClick={toggleMenu} />
+                        <XMarkIcon className='h-8 w-8 cursor-pointer' onClick={toggleMenu} />
                     </div>
                     <ul className='flex flex-col gap-4'>
                         {navLinks.map((link, idx) => (
                             <li
                                 key={idx}
-                                className='bg-[#0F0F0F] px-[20px] py-[16px] rounded-[12px] hover:bg-[#FF6600] cursor-pointer transition-colors duration-300'
+                                className='bg-[#0F0F0F] max-w-[300px] px-4 py-3 rounded-[12px] hover:bg-[#FF6600] cursor-pointer transition-colors duration-300'
                                 onClick={() => {
                                     const target = document.getElementById(link.href);
                                     if (target) {
@@ -97,7 +97,7 @@ function Navbar() {
 
                 {isOpen && (
                     <div
-                        className="fixed top-0 left-0 md:left-[100%] w-full md:w-[30%] h-[100vh] bg-gray-600 opacity-60 z-40 transition-all duration-500 ease-in-out"
+                        className="fixed top-0 left-[100%] w-full h-[100vh] bg-gray-600 min-[950px]:hidden opacity-60 z-40 transition-all duration-500 ease-in-out"
                         style={{
                             transform: isOpen ? 'translateX(-100%)' : 'translateX(0)',
                             visibility: isOpen ? 'visible' : 'hidden',

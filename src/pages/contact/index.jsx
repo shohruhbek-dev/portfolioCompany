@@ -69,8 +69,7 @@ function Contact() {
                             value={formData.message}
                             onChange={handleInputChange}
                             placeholder="Xabar"
-                            rows="2"
-                            className="p-4 rounded-lg text-[#81807E] placeholder-[#81807E] border-b-2 border-[#81807E] focus:outline-none focus:border-[#FF6600] focus:text-[#81807E]"
+                            className="p-4 rounded-lg text-[#81807E] placeholder-[#81807E] border-b-2 border-[#81807E] focus:outline-none focus:border-[#FF6600] focus:text-[#81807E] min-h-[60px] md:min-h-[180px] xl:min-h-[60px]"
                             required
                         />
                         <button
