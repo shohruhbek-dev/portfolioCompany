@@ -44,7 +44,7 @@ function Contact() {
                 </div>
 
                 <div className="contact-form flex flex-col gap-6 text-white">
-                    <h2 className="text-3xl sm:text-4xl md:text-4xl 2xl:text-5xl font-medium text-white">Aloqa uchun</h2>
+                    <h2 className="text-3xl sm:text-4xl md:text-4xl 2xl:text-5xl font-medium text-white max-md:text-center">Aloqa uchun</h2>
                     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                         <input
                             type="text"
@@ -69,8 +69,7 @@ function Contact() {
                             value={formData.message}
                             onChange={handleInputChange}
                             placeholder="Xabar"
-                            rows="2"
-                            className="p-4 rounded-lg text-[#81807E] placeholder-[#81807E] border-b-2 border-[#81807E] focus:outline-none focus:border-[#FF6600] focus:text-[#81807E]"
+                            className="p-4 rounded-lg text-[#81807E] placeholder-[#81807E] border-b-2 border-[#81807E] focus:outline-none focus:border-[#FF6600] focus:text-[#81807E] min-h-[60px] md:min-h-[180px] xl:min-h-[60px]"
                             required
                         />
                         <button
