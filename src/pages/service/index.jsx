@@ -2,9 +2,9 @@ import React from 'react';
 import ServiceCard from '../../components/cards/serviceCard';
 import {
     faLaptopCode,
-    faMobileScreenButton,
     faRobot,
-    faLightbulb
+    faLightbulb,
+    faMobileScreenButton
 } from '@fortawesome/free-solid-svg-icons';
 
 const services = [
@@ -19,16 +19,6 @@ const services = [
         ]
     },
     {
-        icon: faMobileScreenButton,
-        serviceType: "Moslashuvchan ishlab chiqish",
-        serviceDescription: "Saytingiz barcha qurilmalarda ideal ko‘rinish va ishlashni ta’minlaymiz.",
-        moreDescriptions: [
-            "Mobil va planshet versiyalar",
-            "Har xil brauzerlarda bir xil ishlash",
-            "Adaptiv dizayn va tizimli tuzilma",
-        ]
-    },
-    {
         icon: faRobot,
         serviceType: "Telegram botlar",
         serviceDescription: "Telegram botlar orqali avtomatlashtirilgan va qulay xizmat ko‘rsatish tizimlarini yaratamiz.",
@@ -39,13 +29,23 @@ const services = [
         ]
     },
     {
-        icon: faLightbulb,
-        serviceType: "IT maslahatlar",
-        serviceDescription: "Biznesingiz uchun samarali IT strategiyalar va yechimlar bo‘yicha maslahat beramiz.",
+        icon: faMobileScreenButton,
+        serviceType: "E-commerce (internet do'kon)",
+        serviceDescription: "Biznesingiz uchun samarali, funksional va foydalanuvchiga qulay internet do‘koni.",
         moreDescriptions: [
-            "Loyihani boshlashdan oldin tahlil",
-            "Mos texnologiyalarni tanlash",
-            "Xavfsizlik va samaradorlik bo‘yicha tavsiyalar",
+            "Mahsulotlar katalogi va qidiruv tizimi",
+            "Onlayn to‘lov va yetkazib berish integratsiyasi",
+            "Xaridlar tarixi va foydalanuvchi profili",
+        ]
+    },
+    {
+        icon: faLightbulb,
+        serviceType: "Onlayn o'quv platformalari",
+        serviceDescription: "Zamonaviy, qulay va interaktiv onlayn ta’lim tizimlarini yaratamiz.",
+        moreDescriptions: [
+            "Moslashtirilgan kurslar va darslar tizimi",
+            "Video va rasm formatidagi darsliklar",
+            "Reyting, test va yutuqlarni kuzatish imkoniyati",
         ]
     }
 ];
@@ -53,18 +53,18 @@ const services = [
 
 function Service() {
     return (
-        <div id='service' className="service w-full my-10 p-5 border-dotted border-[#1F1F1F] border rounded-2xl">
-          <div className="mb-8 w-full bg-[#1A1A1A] p-6 sm:p-8 md:p-[50px] rounded-2xl">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F9EFEC]">Xizmatlar</h2>
-          </div>
-    
-          <div className="services w-full grid gap-6 grid-cols-1 md:grid-cols-2 ">
-            {services.map((service, index) => (
-              <ServiceCard key={index} service={service} />
-            ))}
-          </div>
+        <div id='service' className="service w-full p-1 my-10 sm:p-3 border-dotted border-[#1F1F1F] border rounded-2xl">
+            <div className="mb-8 w-full bg-[#1A1A1A] p-2 sm:p-4 lg:p-5 rounded-2xl">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-center text-[#F9EFEC]">Xizmatlar</h2>
+            </div>
+
+            <div className="services w-full grid gap-6 grid-cols-1 md:grid-cols-2">
+                {services.map((service, index) => (
+                    <ServiceCard key={index} service={service} />
+                ))}
+            </div>
         </div>
-      );
-    }
-    
+    );
+}
+
 export default Service;

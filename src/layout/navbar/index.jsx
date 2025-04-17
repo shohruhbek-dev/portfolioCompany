@@ -20,7 +20,6 @@ function Navbar() {
         <>
             <style>
                 {`
-                
                 @media (min-width: 950px) {
                     .nav-desktop { display: flex; }
                     .nav-mobile, .hamburger-icon { display: none; }
@@ -41,22 +40,22 @@ function Navbar() {
 
                     <ul className='nav-desktop gap-4 text-[16px]'>
                         {navLinks.map((link, idx) => (
-                          <li
-                          key={idx}
-                          className='bg-[#0F0F0F] px-[20px] py-[16px] rounded-[12px] hover:bg-[#FF6600] cursor-pointer transition-colors duration-300'
-                          onClick={() => {
-                              const target = document.getElementById(link.href);
-                              if (target) {
-                                  target.scrollIntoView({ behavior: 'smooth' });
-                                  if (isOpen) toggleMenu();
-                              }
-                          }}
-                      >
-                          <a className="cursor-pointer">
-                              {link.title}
-                          </a>
-                      </li>
-                      
+                            <li
+                                key={idx}
+                                className='bg-[#0F0F0F] px-[20px] py-[16px] rounded-[12px] hover:bg-[#FF6600] cursor-pointer transition-colors duration-300'
+                                onClick={() => {
+                                    const target = document.getElementById(link.href);
+                                    if (target) {
+                                        target.scrollIntoView({ behavior: 'smooth' });
+                                        if (isOpen) toggleMenu();
+                                    }
+                                }}
+                            >
+                                <a className="cursor-pointer">
+                                    {link.title}
+                                </a>
+                            </li>
+
                         ))}
                     </ul>
 
@@ -68,9 +67,7 @@ function Navbar() {
 
                 </div>
 
-                <div
-                    className={`nav-mobile fixed top-0 left-0 h-[100vh] w-full md:w-[70%] bg-[#1A1A1A] text-white p-6 z-50 transition-transform duration-300 ease-in-out 
-    ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+                <div className={`nav-mobile fixed top-0 left-0 h-[100vh] w-full md:w-[70%] bg-[#1A1A1A] text-white p-6 z-50 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
                 >
                     <div className='flex justify-between items-center mb-6'>
                         <img src={logo} alt="logo" className='w-32' />
@@ -78,22 +75,22 @@ function Navbar() {
                     </div>
                     <ul className='flex flex-col gap-4'>
                         {navLinks.map((link, idx) => (
-                         <li
-                         key={idx}
-                         className='bg-[#0F0F0F] px-[20px] py-[16px] rounded-[12px] hover:bg-[#FF6600] cursor-pointer transition-colors duration-300'
-                         onClick={() => {
-                             const target = document.getElementById(link.href);
-                             if (target) {
-                                 target.scrollIntoView({ behavior: 'smooth' });
-                                 if (isOpen) toggleMenu();
-                             }
-                         }}
-                     >
-                         <a className="cursor-pointer">
-                             {link.title}
-                         </a>
-                     </li>
-                     
+                            <li
+                                key={idx}
+                                className='bg-[#0F0F0F] px-[20px] py-[16px] rounded-[12px] hover:bg-[#FF6600] cursor-pointer transition-colors duration-300'
+                                onClick={() => {
+                                    const target = document.getElementById(link.href);
+                                    if (target) {
+                                        target.scrollIntoView({ behavior: 'smooth' });
+                                        if (isOpen) toggleMenu();
+                                    }
+                                }}
+                            >
+                                <a className="cursor-pointer">
+                                    {link.title}
+                                </a>
+                            </li>
+
                         ))}
                     </ul>
                 </div>
@@ -109,12 +106,17 @@ function Navbar() {
                     />
                 )}
 
+                <a href="tel:+998950907050" target='_blank' className='phone fixed right-4 bottom-4 bg-[#FF6600] w-10 h-10 z-[99] sm:w-12 sm:h-12 sm:right-6 sm:bottom-6 lg:w-14 lg:h-14 lg:right-8 xl:right-10 flex items-center justify-center rounded-full pulse-border'>
+                    <i className="fa-solid fa-phone text-xl sm:text-2xl lg:text-3xl"></i>
+                </a>
 
-
+                <a href="tel:+998950907050" target='_blank' className='phone fixed left-4 bottom-4 bg-black w-10 h-10 z-[99] sm:w-12 sm:h-12 sm:left-6 sm:bottom-6 lg:w-14 lg:h-14 lg:left-8 2xl:left-10 flex items-center justify-center rounded-full pulse-border'>
+                    <i className="fa-brands fa-telegram text-[42px] sm:text-[50px] lg:text-[59px] text-[#FF6600]"></i>
+                </a>
 
             </div>
         </>
-    );
+    )
 }
 
 
