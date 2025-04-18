@@ -21,7 +21,7 @@ function Contact() {
         <section id='contact' className="contact w-full my-20 py-10 px-4 sm:px-8 md:px-12 lg:px-24 bg-[#1A1A1A] text-white rounded-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div className="about-in2 bg-[#1A1A1A] rounded-[20px] font-medium flex flex-col gap-6 mb-4">
-                    <h1 className='about-text text-white flex flex-col text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>Why choose us?</h1>
+                    <h1 className='about-text text-white flex flex-col text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>Nega aynan biz?</h1>
                     <span className='flex flex-col gap-1'>
                         <h2 className='text-xl'>
                             <i className="fa-solid fa-eye mr-2"></i> Monitoring
