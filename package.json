@@ -17,6 +17,8 @@
     "aos": "^2.3.4",
     "heroicons": "^2.2.0",
     "i18next": "^24.2.3",
+    "i18next-browser-languagedetector": "^8.0.5",
+    "i18next-http-backend": "^3.0.2",
     "lucide-react": "^0.487.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
