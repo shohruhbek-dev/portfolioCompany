@@ -6,6 +6,10 @@ import LanguageSelector from './languageselector';
 
 function Navbar() {
     const { t, i18n } = useTranslation();
+    const ChangeLng = (selectedLanguage) => {
+      i18n.changeLanguage(selectedLanguage);
+      localStorage.setItem("i18nextLng", selectedLanguage);
+    };
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
