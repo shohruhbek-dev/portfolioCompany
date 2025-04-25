@@ -42,7 +42,7 @@ const About = () => {
         <div id='about' className='about max-w-[1840px] w-full h-auto container'>
             <div className="about-in1 relative bg-[#1A1A1A] rounded-[20px] p-3 mt-5 min-[420px]:p-5 sm:pt-8 2xl:pl-8">
                 <span className='about-texts flex flex-col gap-2 uppercase font-semibold text-3xl text-white mb-4 xl:text-5xl 2xl:text-7xl'>
-                    <h2>muvaffaqiyatga olib boradigan</h2>
+                    <h2 className='max-w-[500px] w-full'>muvaffaqiyatga olib boradigan</h2>
                     <span className='max-w-[360px] w-full h-[2px] bg-white xl:max-w-[480px] 2xl:max-w-[700px]'></span>
                     <h2>raqamli yechimlar</h2>
                 </span>
@@ -74,6 +74,9 @@ const About = () => {
                                 <div key={index} className="flex items-center flex-row px-4 uppercase">
                                     <span className="w-2 h-2 absolute top-[10px] ml-[-20px] rounded-full bg-white"></span>
                                     <p>{tag}</p>
+                                    <div>
+
+                                    </div>
                                 </div>
                             ))}
                         </Slider>

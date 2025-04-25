@@ -24,7 +24,8 @@
     "react-router-dom": "^7.5.0",
     "react-scroll": "^1.9.3",
     "react-slick": "^0.30.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tailwind": "^2.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
