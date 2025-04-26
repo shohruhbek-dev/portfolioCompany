@@ -18,7 +18,7 @@ function Service() {
         {
             icon: faLaptopCode,
             serviceType: t("Veb rivojlantirish"),
-            serviceDescription: t("Biz sizning brendingiz va maqsadlaringizga mos zamonaviy veb-saytlar yaratamiz."),
+            serviceDescription: t("Brendingiz va maqsadlaringizga mos zamonaviy veb-saytlar yaratamiz."),
             moreDescriptions: [
                 t("SEO-ga moslashtirilgan saytlar"),
                 t("Interaktiv interfeys va foydalanuvchi tajribasi"),

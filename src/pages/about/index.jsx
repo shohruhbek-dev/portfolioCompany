@@ -54,7 +54,7 @@ const About = () => {
                         <>
                             <h2>{t("raqamli yechimlar")}</h2>
                             <span className='max-w-[320px] w-full h-[2px] bg-white xl:max-w-[480px] 2xl:max-w-[700px]'></span>
-                            <h2 className='max-w-[350px] xl:max-w-[450px] 2xl:max-w-[650px]'>{t("muvaffaqiyatga olib boradigan")}</h2>
+                            <h2 className='max-w-[350px] xl:max-w-[450px] 2xl:max-w-[750px]'>{t("muvaffaqiyatga olib boradigan")}</h2>
                         </>
                     ) : (
                         <>
@@ -64,7 +64,7 @@ const About = () => {
                         </>
                     )}
                 </span>
-                <a target='_blank' href='https://t.me/xusanovvm' className='max-w-[350px] w-full flex flex-row text-[#FF6600] gap-2 md:pt-2'>
+                <a target='_blank' href='https://t.me/xusanovvm' className='max-w-[450px] w-full flex flex-row text-[#FF6600] gap-2 md:pt-2'>
                     <i className="fa-solid fa-circle-chevron-right text-2xl mb-4 border-2 border-[#FF6600] p-2 rounded-full xl:text-5xl"></i>
                     <p className='font-normal text-xl uppercase mt-2 xl:mt-3 xl:text-3xl'>{t("Loyihani boshlang")}</p>
                 </a>
