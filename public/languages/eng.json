@@ -36,7 +36,6 @@
     "Ismingiz": "Your name",
     "Telefon raqamingiz": "Your phone number",
     "Xabar": "Message",
-    
     "Biz raqamli yechimlarning o‘zgartiruvchi kuchiga ishonamiz. Mutaxassislarimiz jamoasi siz kabi bizneslarga tezkor raqamli muhitda rivojlanishda yordam berishga bag‘ishlangan.": "We believe in the transformative power of digital solutions. Our team of specialists is dedicated to helping businesses like yours thrive in a fast-paced digital environment.",
     "Loyihani boshlang": "Start the project",
     "raqamli yechimlar": "digital solutions",
@@ -45,5 +44,8 @@
     "telegram bot": "telegram bots",
     "landing sahifalar": "landing pages",
     "onlayn o‘quv platformalari": "online learning platforms",
-    "funktsional veb-saytlar": "functional websites"
+    "funktsional veb-saytlar": "functional websites",
+    "Oxirgi qilgan ishlarimiz": "Our latest works",
+    "Xabaringiz yuborildi!": "Your message has been sent!",
+    "Yuborilmoqda...": "Sending..."
 }

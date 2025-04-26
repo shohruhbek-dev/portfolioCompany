@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import engFlag from "../../assets/eng.png";
-import uzFlag from "../../assets/uz.png";
-import ruFlag from "../../assets/ru.png";
+import engFlag from "../../assets/enflag.avif";
+import uzFlag from "../../assets/uzflag.avif";
+import ruFlag from "../../assets/ruflag.avif";
 
 const languages = [
   { code: "en", label: "English", flag: engFlag },
@@ -23,7 +23,7 @@ const LanguageSelector = () => {
   };
 
   return (
-    <div className="relative w-14 inline-block">
+    <div className="relative w-12 h-auto">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 w-8 h-8 rounded-md"
@@ -31,7 +31,7 @@ const LanguageSelector = () => {
         <img
           src={currentLang.flag}
           alt={currentLang.code}
-          className="w-12 h-8 object-cover"
+          className="w-12 h-6 object-cover"
           loading="lazy"
         />
       </button>
@@ -48,7 +48,7 @@ const LanguageSelector = () => {
                 loading="lazy"
                 src={lang.flag}
                 alt={lang.code}
-                className="w-8 h-6 object-cover"  // Reduced flag size when menu is open
+                className="w-8 h-6 object-cover"  
               />
               <span className="text-sm">{lang.label}</span>
             </button>

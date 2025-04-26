@@ -30,11 +30,14 @@ const About = () => {
         pauseOnHover: false,
         variableWidth: true,
     };
+
     const { t, i18n } = useTranslation();
     const ChangeLng = (selectedLanguage) => {
         i18n.changeLanguage(selectedLanguage);
         localStorage.setItem("i18nextLng", selectedLanguage);
     };
+    const lang = i18n.language;
+
     const tags = [
         t("elektron tijorat"),
         t("telegram bot"),
@@ -42,20 +45,31 @@ const About = () => {
         t("onlayn o‘quv platformalari"),
         t("funktsional veb-saytlar")
     ];
+
     return (
-        <div id='about' className='about max-w-[1840px] w-full h-auto container'>
+        <div id='about' className='about max-w-[1840px] h-auto container'>
             <div className="about-in1 relative bg-[#1A1A1A] rounded-[20px] p-3 mt-5 min-[420px]:p-5 sm:pt-8 2xl:pl-8">
                 <span className='about-texts flex flex-col gap-2 uppercase font-semibold text-3xl text-white mb-4 xl:text-5xl 2xl:text-7xl'>
-                    <h2>{t("muvaffaqiyatga olib boradigan")}</h2>
-                    <span className='max-w-[360px] w-full h-[2px] bg-white xl:max-w-[480px] 2xl:max-w-[700px]'></span>
-                    <h2>{t("raqamli yechimlar")}</h2>
+                    {lang === "ru" || lang === "en" ? (
+                        <>
+                            <h2>{t("raqamli yechimlar")}</h2>
+                            <span className='max-w-[320px] w-full h-[2px] bg-white xl:max-w-[480px] 2xl:max-w-[700px]'></span>
+                            <h2 className='max-w-[350px] xl:max-w-[450px] 2xl:max-w-[650px]'>{t("muvaffaqiyatga olib boradigan")}</h2>
+                        </>
+                    ) : (
+                        <>
+                            <h2 className='max-w-[350px] xl:max-w-[450px] 2xl:max-w-[650px]'>{t("muvaffaqiyatga olib boradigan")}</h2>
+                            <span className='max-w-[320px] w-full h-[2px] bg-white xl:max-w-[480px] 2xl:max-w-[700px]'></span>
+                            <h2>{t("raqamli yechimlar")}</h2>
+                        </>
+                    )}
                 </span>
-                <a target='_blank' href='https://t.me/xusanovvm' className='flex flex-row text-[#FF6600] gap-2 md:pt-2'>
+                <a target='_blank' href='https://t.me/xusanovvm' className='max-w-[350px] w-full flex flex-row text-[#FF6600] gap-2 md:pt-2'>
                     <i className="fa-solid fa-circle-chevron-right text-2xl mb-4 border-2 border-[#FF6600] p-2 rounded-full xl:text-5xl"></i>
-                    <p className='font-normal text-xl uppercase mt-2 xl:text-3xl'>{t("Loyihani boshlang")}</p>
+                    <p className='font-normal text-xl uppercase mt-2 xl:mt-3 xl:text-3xl'>{t("Loyihani boshlang")}</p>
                 </a>
                 <img
-                    className='code-gif w-[280px] h-[220px] md:absolute md:right-4 md:top-4 xl:w-[340px] xl:h-[250px] 2xl:w-[500px] 2xl:h-[370px] rounded-2xl mb-5 xl:top-10 xl:right-8'
+                    className='code-gif w-[280px] h-[200px] md:absolute md:right-4 md:top-4 xl:w-[340px] xl:h-[250px] 2xl:w-[500px] 2xl:h-[370px] rounded-2xl mb-5 xl:top-10 xl:right-8'
                     loading='lazy'
                     src={cod}
                     alt="coding" />
