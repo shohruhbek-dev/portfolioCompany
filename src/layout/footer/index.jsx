@@ -1,7 +1,13 @@
 import React from 'react';
 import logo from '../../assets/logocom.avif';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+  const { t, i18n } = useTranslation();
+  const ChangeLng = (selectedLanguage) => {
+    i18n.changeLanguage(selectedLanguage);
+    localStorage.setItem("i18nextLng", selectedLanguage);
+  };
   return (
     <div className="footer w-full bg-[#1A1A1A] text-white p-6 sm:p-8 md:p-10 rounded-2xl">
       <div className="bg-[#1A1A1A] text-white p-4 flex flex-col gap-4 sm:flex-row justify-between items-center rounded-2xl">
@@ -34,7 +40,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <p className="text-center text-sm sm:text-base mt-4">© 2025 Barcha huquqlar himoyalangan</p>
+      <p className="text-center text-sm sm:text-base mt-4">© 2025 {t("Barcha huquqlar himoyalangan")}</p>
     </div>
   );
 }
