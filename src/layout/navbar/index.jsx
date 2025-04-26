@@ -17,7 +17,7 @@ function Navbar() {
     const navLinks = [
         { title: t('Kompaniya haqida'), href: 'about' },
         { title: t('Xizmatlar'), href: 'service' },
-        { title: t('Loyihalar'), href: 'clients' },
+        { title: t('Loyihalar'), href: 'works' },
         { title: t('Aloqa'), href: 'contact' }
     ];
 

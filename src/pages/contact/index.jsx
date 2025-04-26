@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { toast } from 'react-toastify';
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -13,15 +15,41 @@ function Contact() {
         setFormData((prevData) => ({ ...prevData, [name]: value }));
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(formData);
-    };
     const { t, i18n } = useTranslation();
     const ChangeLng = (selectedLanguage) => {
         i18n.changeLanguage(selectedLanguage);
         localStorage.setItem("i18nextLng", selectedLanguage);
     };
+
+    const [loading, setLoading] = useState(false)
+    const SendMessage = (e) => {
+        setLoading(true)
+        e.preventDefault();
+        const token = '6205773676:AAFwXXQzGi8jmdR0nP4JkKlkSG_x8rZEXnk'
+        const chatId = 1337108345
+        const url = `https://api.telegram.org/bot${token}/sendMessage`;
+        const name = document.getElementById('name').value
+        const phone = document.getElementById('phone').value
+        const message = document.getElementById('message').value
+        const messageContent = `Ism: ${name} \nTelefon: ${phone} \nXabar: ${message}`
+        axios({
+            url: url,
+            method: 'POST',
+            data: {
+                "chat_id": chatId,
+                "text": messageContent,
+            }
+        }).then((res) => {
+            document.getElementById('myForm').reset()
+            setFormData({ name: '', phone: '', message: '' })
+            toast.success(t("Xabaringiz yuborildi!"))
+        }).catch((err) => {
+            console.log(err)
+        }).finally(() => {
+            setLoading(false)
+        })
+    }
+
     return (
         <section id='contact' className="contact w-full my-20 py-10 px-4 sm:px-8 md:px-12 lg:px-24 bg-[#1A1A1A] text-white rounded-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -50,38 +78,45 @@ function Contact() {
 
                 <div className="contact-form flex flex-col gap-6 text-white">
                     <h2 className="text-3xl sm:text-4xl md:text-4xl 2xl:text-5xl font-medium text-white max-md:text-center">{t("Aloqa uchun")}</h2>
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                    <form
+                        id='myForm'
+                        onSubmit={SendMessage}
+                        className="flex flex-col gap-4">
                         <input
+                            id='name'
                             type="text"
                             name="name"
                             value={formData.name}
                             onChange={handleInputChange}
                             placeholder={t("Ismingiz")}
-                            className="p-4 rounded-lg text-[#81807E] placeholder-[#81807E] border-b-2 border-[#81807E] focus:outline-none focus:border-[#FF6600] focus:text-[#81807E]"
+                            className="p-4 rounded-lg text-[#81807E] placeholder-[#81807E] border-b-2 border-[#81807E] outline-none focus:border-[#FF6600] focus:text-[#81807E]"
                             required
                         />
                         <input
-                            type="tel"
+                            id='phone'
+                            type="number"
                             name="phone"
                             value={formData.phone}
                             onChange={handleInputChange}
                             placeholder={t("Telefon raqamingiz")}
-                            className="p-4 rounded-lg text-[#81807E] placeholder-[#81807E] border-b-2 border-[#81807E] focus:outline-none focus:border-[#FF6600] focus:text-[#81807E]"
+                            className="p-4 rounded-lg text-[#81807E] placeholder-[#81807E] border-b-2 border-[#81807E] outline-none focus:border-[#FF6600] focus:text-[#81807E]"
                             required
                         />
                         <textarea
+                            id='message'
                             name="message"
                             value={formData.message}
                             onChange={handleInputChange}
                             placeholder={t("Xabar")}
-                            className="p-4 rounded-lg text-[#81807E] placeholder-[#81807E] border-b-2 border-[#81807E] focus:outline-none focus:border-[#FF6600] focus:text-[#81807E] min-h-[60px] md:min-h-[180px] xl:min-h-[60px]"
+                            className="p-4 rounded-lg text-[#81807E] placeholder-[#81807E] border-b-2 border-[#81807E] focus:outline-none focus:border-[#FF6600] focus:text-[#81807E] min-h-[60px] md:min-h-[180px] xl:min-h-[60px] outline-none"
                             required
                         />
                         <button
+                            loading={loading}
                             type="submit"
                             className="bg-[#FF6600] text-white py-3 px-6 rounded-lg hover:bg-orange-600 transition duration-300 w-full sm:w-auto"
                         >
-                            {t("Yuborish")}
+                            {loading ? t("Yuborilmoqda...") : t("Yuborish")}
                         </button>
                     </form>
                 </div>
