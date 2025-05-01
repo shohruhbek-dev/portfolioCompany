@@ -23,17 +23,17 @@ function Footer() {
         <div>
           <ul className="flex flex-row gap-4 sm:gap-6">
             <li className="bg-[#0F0F0F] px-[24px] py-[10px] rounded-[12px] text-white text-lg hover:bg-[#FF6600]">
-              <a target='_blank' href="tel:+998950907050">
+              <a aria-label="Call +998950907050" target='_blank' href="tel:+998950907050">
                 <i className="fa-solid fa-phone"></i>
               </a>
             </li>
             <li className="bg-[#0F0F0F] px-[24px] py-[10px] rounded-[12px] text-white text-lg hover:bg-[#FF6600]">
-              <a target='_blank' href="https://www.instagram.com/xusanovv.m">
+              <a aria-label="Visit our Instagram profile" target='_blank' href="https://www.instagram.com/xusanovv.m">
                 <i className="fa-brands fa-instagram"></i>
               </a>
             </li>
             <li className="bg-[#0F0F0F] px-[24px] py-[10px] rounded-[12px] text-white text-lg hover:bg-[#FF6600]">
-              <a target='_blank' href="https://t.me/xusanovvm">
+              <a aria-label="Send us a message on Telegram" target='_blank' href="https://t.me/xusanovvm">
                 <i className="fa-brands fa-telegram"></i>
               </a>
             </li>

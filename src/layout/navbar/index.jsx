@@ -97,7 +97,10 @@ function Navbar() {
                                     }
                                 }}
                             >
-                                <span className="cursor-pointer">{item.title}</span>
+                                <a
+                                    aria-label={`Navigate to ${item.title}`}
+                                    href={item.href}
+                                    className="sections cursor-pointer">{item.title}</a>
                             </li>
                         ))}
                     </ul>
